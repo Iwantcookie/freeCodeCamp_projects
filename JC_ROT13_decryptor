@@ -1,0 +1,32 @@
+
+function rot13(str) { // LBH QVQ VG!
+  
+  var splitted = str.split("");
+  var offset = 0;
+  
+
+  
+  for(var i = 0; i < splitted.length; i++){
+    
+    //console.log(90 - (64 - ((splitted[i].charCodeAt() - 13))));
+    
+    
+    if(splitted[i].match(/[A-Z]/i)){
+       
+      if((splitted[i].charCodeAt() - 13) < 65){
+        offset = 90 - (64 - ((splitted[i].charCodeAt() - 13)));
+        
+      }else{
+        offset = splitted[i].charCodeAt() - 13;
+      }
+      
+      console.log(offset);
+      splitted[i] = String.fromCharCode(offset);
+    }
+  }
+  return splitted.join("");
+}
+
+
+// Change the inputs below to test
+rot13("SERR CVMMN!");
