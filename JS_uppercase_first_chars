@@ -1,0 +1,23 @@
+
+function titleCase(str) {
+  var tempStr = [];
+  var ansStr = [];
+  str = str.split(" ");
+  
+  for(var i = 0; i < str.length; i++){
+    tempStr = str[i].split("");
+    
+    tempStr[0] = tempStr[0].toUpperCase();
+    
+    for(var j = 1; j < tempStr.length; j++){
+      tempStr[j] = tempStr[j].toLowerCase();
+    }
+    ansStr.push(tempStr.join(""));
+
+  }
+  return ansStr.join(" ");
+
+
+}
+
+titleCase("I'm a little tea pot");
