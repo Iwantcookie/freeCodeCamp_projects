@@ -1,0 +1,13 @@
+
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+  
+  var arrFilt = arr.filter(notFalsy); 
+  return arrFilt;
+}
+
+function notFalsy(value){
+  return Boolean(value);
+}
+
+bouncer([7, "ate", "", false, 9]);
