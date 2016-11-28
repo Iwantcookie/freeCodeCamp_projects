@@ -1,0 +1,15 @@
+
+function palindrome(str) {
+  // Good luck!
+  str = str.toLowerCase();
+  str = str.replace(/\W/g,"");
+  str = str.replace(/_/g,"");
+ 
+  var revStr = str.split("").reverse().join("");
+
+  if(str == revStr){return true;}
+  
+  return false;
+}
+
+palindrome("race car");
