@@ -1,0 +1,27 @@
+
+function mutation(arr) {
+  
+  var found = false;
+  var tempArr = [];
+  var searchIn = arr[0].toLowerCase();
+  var searchFor = arr[1].split("");
+  var counter = 0;
+  
+  for(var i = 0; i < searchFor.length; i++){
+    searchFor[i] = searchFor[i].toLowerCase();
+    console.log(searchFor[i]);
+    
+    if(searchIn.indexOf(searchFor[i]) >= 0){
+      counter++;
+      
+    }
+    
+  }
+  
+  if(counter >= searchFor.length){return true;}
+  
+  return false;
+}
+
+
+mutation(["hello", "Hello"]);
