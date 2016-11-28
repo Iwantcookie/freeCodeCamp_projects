@@ -1,0 +1,21 @@
+
+function destroyer(arr, a, b, c) {
+  // Remove all the values
+  var filterArg = Array.of(a, b, c);
+  
+  console.log("arr: " + arr);
+  console.log("filter: " + filterArg);
+  
+  return arr.filter(filterFunc, filterArg);
+  
+
+}
+
+function filterFunc(value){
+  console.log(value);
+  console.log(this.includes(value));
+  return !(this.includes(value));
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+console.log("-------------------------------------------------------------------");
