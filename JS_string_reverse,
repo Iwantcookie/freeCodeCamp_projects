@@ -1,0 +1,8 @@
+
+function reverseString(str) {
+  var strArr = [];
+  
+  return str.split("").reverse().join("");
+  
+}
+reverseString("hello");
