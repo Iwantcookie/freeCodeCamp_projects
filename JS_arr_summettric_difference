@@ -1,0 +1,20 @@
+
+function diffArray(arr1, arr2) {
+  var newArr1 = [];
+  var newArr2 = [];
+  
+
+    newArr1 = arr2.filter(filterFunction, arr1);
+
+    newArr2 = arr1.filter(filterFunction, arr2);
+ 
+  
+  // Same, same; but different.
+  return newArr1.concat(newArr2);
+}
+
+function filterFunction(value){
+  return !(this.includes(value));
+}
+
+diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
