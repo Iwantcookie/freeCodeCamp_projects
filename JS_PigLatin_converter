@@ -1,0 +1,19 @@
+
+function translatePigLatin(str) {
+  var modStrArr = [];
+  var strArr = str.split("");
+  
+  for(var i = 0; i < strArr.length; i++){
+    if(strArr[i] == "a" || strArr[i] =="e" || strArr[i] =="o" || strArr[i] =="u" || strArr[i] =="i" || strArr[i] =="y"){
+     if(i === 0){
+        return str + "way";
+      }
+      if(strArr[i] == "a" || strArr[i] =="e" || strArr[i] =="o" || strArr[i] =="u" || strArr[i] =="i" || strArr[i] =="y"){
+        modStrArr.push(strArr.slice(i).join(""));
+        return modStrArr[0] + strArr.slice(0,i).join("") + "ay";
+      }
+    }
+  }
+}
+
+translatePigLatin("algorithm");
