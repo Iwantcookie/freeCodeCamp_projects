@@ -1,0 +1,17 @@
+
+function fearNotLetter(str) {
+  
+  var strArr = str.split("");
+  var charCode = [];
+  
+  
+  for(var i = 0; i < strArr.length - 1; i++){
+    if((strArr[i + 1].charCodeAt() - strArr[i].charCodeAt()) > 1){
+      return String.fromCharCode(strArr[i].charCodeAt() + 1);
+    }
+  }
+  
+  return undefined;
+}
+
+fearNotLetter("bcd");
