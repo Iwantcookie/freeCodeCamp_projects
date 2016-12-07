@@ -1,0 +1,38 @@
+
+function pairElement(str) {
+  
+  var strArr = [];
+  var innArr = [];
+  var finalArr = [];
+  strArr = str.split("");
+  
+  for(var i = 0; i < strArr.length; i++ ){
+    switch(strArr[i]){
+      case "A":
+        innArr.push(strArr[i], "T");
+        finalArr.push(innArr);
+        innArr = [];
+        break;
+      case "C":
+        innArr.push(strArr[i], "G");
+        finalArr.push(innArr);
+        innArr = [];
+        break;
+      case "G":
+        innArr.push(strArr[i], "C");
+        finalArr.push(innArr);
+        innArr = [];
+        break;
+      case "T":
+        innArr.push(strArr[i], "A");
+        finalArr.push(innArr);
+        innArr = [];
+        break;
+        
+    }
+  }
+
+  return finalArr;
+}
+
+pairElement("ATCGA");
